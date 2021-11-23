@@ -7,9 +7,9 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = {"./src/test/resources/appFeatures/AccountsPage.feature"},
+		features = {"./src/test/resources/appFeatures"},
 		glue = {"stepDefinitions","AppHooks"},
-		plugin = {"pretty"},
+		plugin = {"pretty","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 		monochrome = true
 		)
 public class MyTestRunner {
