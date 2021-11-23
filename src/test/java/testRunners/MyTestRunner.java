@@ -7,9 +7,10 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = {"\\src\\test\\resources\\appFeatures\\"},
+		features = {"./src/test/resources/appFeatures/AccountsPage.feature"},
 		glue = {"stepDefinitions","AppHooks"},
-		plugin = {"pretty"}
+		plugin = {"pretty"},
+		monochrome = true
 		)
 public class MyTestRunner {
 
