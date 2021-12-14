@@ -29,7 +29,7 @@ public class ApplicationHooks {
 		driverFactory=new DriverFactory();
 		driver=driverFactory.init_driver(browserName);
 	}
-	
+	// For After method priority is reverse. That means first order=1 will execute than order=0
 	@After(order = 0)
 	public void quitBrowser() {
 		driver.quit();
